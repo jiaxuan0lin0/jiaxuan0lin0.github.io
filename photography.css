@@ -1,0 +1,275 @@
+/* Photography page, set in Apple's web style.
+   Type: SF Pro on Apple devices (system font), Inter elsewhere (self-hosted).
+   Scale and colors follow apple.com: 80/600 hero, 28/400 intro, 56/600 section
+   headline, 24/400 subhead, 19/600 + 19/400 captions; black background with
+   #f5f5f7 text and #86868b secondary text; photos with rounded corners. */
+
+@font-face {
+  font-family: "Inter Web";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("fonts/inter-latin-standard-normal.woff2") format("woff2-variations"),
+       url("fonts/inter-latin-standard-normal.woff2") format("woff2");
+}
+
+.photo-page {
+  --bg: #000;
+  --ink: #f5f5f7;
+  --muted: #86868b;
+  --hair: #333336;
+  --link: #2997ff;
+
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter Web",
+          "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --radius: 20px;
+  --gutter: 20px;
+  --row-gap: 56px;
+  --chapter-gap: 160px;
+  --cap-h: 82vh;           /* tallest a single portrait photo may be */
+
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 17px;
+  line-height: 1.47059;
+  letter-spacing: -0.022em;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* the shared stylesheet spaces sections apart; chapters set their own spacing */
+.photo-page section { margin-top: 0; }
+.photo-page a { color: var(--ink); }
+
+.ph-head, .chapter, .ph-foot { padding: 0 32px; }
+.ph-inner { max-width: 1200px; margin: 0 auto; }
+
+/* ---------- hero ---------- */
+.ph-head { padding-top: 28px; }
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 17px;
+  letter-spacing: -0.022em;
+  color: var(--muted) !important;
+}
+.back::before { content: "\2039"; font-size: 24px; line-height: 1; margin-top: -2px; }
+.back:hover { color: var(--ink) !important; text-decoration: none; }
+
+.ph-title {
+  text-align: center;
+  padding: 120px 0 20px;
+}
+.ph-head h1 {
+  font-family: var(--font);
+  font-size: 80px;
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  margin: 0;
+  color: var(--ink);
+}
+.ph-head h1, .lede, .chapter h2 { text-wrap: balance; }
+.lede {
+  margin: 20px auto 0;
+  max-width: 24em;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.28583;
+  letter-spacing: 0.007em;
+  color: var(--muted);
+}
+
+/* ---------- chapters ---------- */
+.chapter { padding-top: var(--chapter-gap); }
+
+.chapter-head { margin: 0 0 40px; }
+.chapter h2 {
+  font-family: var(--font);
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 1.07143;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  scroll-margin-top: 40px;
+}
+.cities {
+  margin: 10px 0 0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.33341;
+  letter-spacing: 0.009em;
+  color: var(--muted);
+}
+
+/* ---------- photos ---------- */
+.chapter figure { margin: 0; }
+.chapter figure a { display: block; cursor: zoom-in; border-radius: var(--radius); }
+.chapter figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  background: #1d1d1f;
+}
+.chapter figcaption {
+  margin-top: 16px;
+  font-size: 19px;
+  line-height: 1.4211;
+  letter-spacing: 0.012em;
+  color: var(--muted);
+}
+.chapter figcaption em {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--ink);
+}
+.chapter figcaption .place { margin-left: 8px; }
+
+.chapter .wide, .chapter .pair, .chapter .solo { margin-bottom: var(--row-gap); }
+.chapter .ph-inner > :last-child { margin-bottom: 0; }
+
+/* one landscape photo across the full column */
+.wide { width: 100%; }
+
+/* two photos at the same height; widths follow their aspect ratios */
+.pair {
+  display: flex;
+  gap: var(--gutter);
+  align-items: flex-start;
+}
+.pair figure { flex: var(--ar) 1 0%; min-width: 0; }
+
+/* a single portrait photo set to one side, caption in the open space beside it */
+.solo {
+  display: grid;
+  gap: 32px;
+  align-items: end;
+}
+.solo a { width: min(100%, calc(var(--cap-h) * var(--ar))); }
+.solo figcaption { margin: 0; max-width: 16em; }
+.solo figcaption em { display: block; }
+.solo figcaption .place { margin-left: 0; }
+
+.solo-right { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+.solo-right a { grid-column: 2; grid-row: 1; justify-self: end; }
+.solo-right figcaption { grid-column: 1; grid-row: 1; justify-self: end; text-align: right; }
+
+.solo-left { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+.solo-left a { grid-column: 1; grid-row: 1; justify-self: start; }
+.solo-left figcaption { grid-column: 2; grid-row: 1; justify-self: start; }
+
+/* ---------- footer ---------- */
+.ph-foot { padding-top: var(--chapter-gap); padding-bottom: 40px; }
+.ph-foot p {
+  margin: 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--hair);
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 15px;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  color: var(--muted);
+}
+.ph-foot a { color: var(--link); }
+
+/* ---------- focus ---------- */
+.photo-page a:focus-visible,
+.photo-page button:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 4px;
+}
+
+/* ---------- viewer ---------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 80px;
+}
+.lightbox[hidden] { display: none; }
+.lb-figure { margin: 0; text-align: center; }
+.lb-figure img {
+  max-width: 100%;
+  max-height: calc(100vh - 112px);
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+.lb-figure figcaption {
+  margin-top: 16px;
+  font-size: 19px;
+  letter-spacing: 0.012em;
+  color: var(--muted);
+}
+.lb-btn {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 0;
+  background: rgba(66, 66, 69, 0.72);
+  color: #f5f5f7;
+  font-family: var(--font);
+  font-size: 26px;
+  line-height: 44px;
+  text-align: center;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.lb-btn:hover { background: rgba(110, 110, 115, 0.8); }
+.lb-close { top: 20px; right: 20px; font-size: 18px; }
+.lb-prev { left: 20px; top: 50%; transform: translateY(-50%); }
+.lb-next { right: 20px; top: 50%; transform: translateY(-50%); }
+@media (prefers-reduced-motion: reduce) { .lb-btn { transition: none; } }
+
+/* ---------- medium screens ---------- */
+@media (max-width: 1068px) {
+  .ph-title { padding-top: 96px; }
+  .ph-head h1 { font-size: 64px; line-height: 1.0625; letter-spacing: -0.009em; }
+  .lede { font-size: 24px; line-height: 1.33341; letter-spacing: 0.009em; }
+  .chapter h2 { font-size: 48px; line-height: 1.08349; letter-spacing: -0.003em; }
+  .photo-page { --chapter-gap: 128px; }
+}
+
+/* ---------- phones: one column ---------- */
+@media (max-width: 734px) {
+  .photo-page { --radius: 14px; --row-gap: 40px; --chapter-gap: 96px; }
+  .ph-head, .chapter, .ph-foot { padding-left: 20px; padding-right: 20px; }
+  .ph-head { padding-top: 20px; }
+  .ph-title { padding-top: 64px; }
+  .ph-head h1 { font-size: 48px; line-height: 1.08349; letter-spacing: -0.003em; }
+  .lede { font-size: 21px; line-height: 1.381; letter-spacing: 0.011em; }
+  .chapter-head { margin-bottom: 28px; }
+  .chapter h2 { font-size: 40px; line-height: 1.1; letter-spacing: 0; }
+  .cities { font-size: 21px; line-height: 1.381; letter-spacing: 0.011em; }
+  .chapter figcaption { font-size: 17px; line-height: 1.47059; letter-spacing: -0.022em; }
+  .wide, .pair, .solo, .solo a { width: 100%; }
+  .pair { flex-direction: column; gap: var(--row-gap); }
+  .pair figure { flex: none; width: 100%; }
+  .solo { display: block; }
+  .solo figcaption { margin-top: 14px; text-align: left; max-width: none; }
+  .solo figcaption em { display: inline; }
+  .solo figcaption .place { margin-left: 6px; }
+  .ph-foot p { flex-direction: column; gap: 6px; }
+  .lightbox { padding: 16px 8px 80px; }
+  .lb-prev, .lb-next { top: auto; bottom: 20px; transform: none; }
+  .lb-prev { left: calc(50% - 56px); }
+  .lb-next { right: calc(50% - 56px); }
+}

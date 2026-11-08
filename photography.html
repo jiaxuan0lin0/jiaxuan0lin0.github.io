@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Photography — Jiaxuan Lin</title>
+  <meta name="description" content="Photographs of cities and light by Jiaxuan Lin.">
+  <meta name="author" content="Jiaxuan Lin">
+  <link rel="icon" href="data:,">
+  <meta name="theme-color" content="#000000">
+  <link rel="canonical" href="https://jiaxuan0lin0.github.io/photography.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jiaxuan0lin0.github.io/photography.html">
+  <meta property="og:title" content="Photography — Jiaxuan Lin">
+  <meta property="og:image" content="https://jiaxuan0lin0.github.io/photos/hk-star-ferry-sunset_thumb.jpg">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="photography.css">
+</head>
+<body class="photo-page">
+
+<!--
+  One chapter per country. Row types inside a chapter:
+    figure.wide            one landscape photo across the column
+    div.pair               two photos at equal height; each figure sets --ar (width / height)
+    figure.solo.solo-left  one portrait photo with its caption beside it (also .solo-right); set --ar
+  data-place on a figure is the city; it appears in small type under the photo and is collected
+  automatically into the list next to the chapter title. Leave it out where the country says enough
+  (as for Singapore).
+  To add a photo: put NAME.jpg (long side ~2000px) and NAME_thumb.jpg (long side ~800px) in photos/,
+  copy a figure, and update the file names, --ar, width/height, data-place and caption.
+  To add a country: copy a whole <section class="chapter">. Remove location data from photos before uploading.
+-->
+
+<header class="ph-head">
+  <div class="ph-inner">
+    <a class="back" href="index.html">Jiaxuan Lin</a>
+    <div class="ph-title">
+      <h1>Photography</h1>
+      <p class="lede">
+        Cities and the light around them, from places I have lived in and passed through.
+      </p>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ================= CHINA ================= -->
+  <section class="chapter" data-country="China" aria-labelledby="china">
+    <div class="ph-inner">
+      <div class="chapter-head">
+        <h2 id="china">China</h2>
+        <p class="cities"></p>
+      </div>
+
+      <figure class="wide" data-place="Hong Kong">
+        <a href="photos/hk-harbour-clouds.jpg"><img
+            src="photos/hk-harbour-clouds_thumb.jpg"
+            srcset="photos/hk-harbour-clouds_thumb.jpg 800w, photos/hk-harbour-clouds.jpg 2000w"
+            sizes="(max-width: 1184px) 100vw, 1120px"
+            width="800" height="588" alt="Boats on Victoria Harbour beneath dramatic clouds"></a>
+        <figcaption><em>Clouds over Victoria Harbour</em> <span class="place">Hong Kong</span></figcaption>
+      </figure>
+
+      <div class="pair">
+        <figure style="--ar: 0.75" data-place="Hong Kong">
+          <a href="photos/hk-victoria-harbour.jpg"><img
+              src="photos/hk-victoria-harbour_thumb.jpg"
+              srcset="photos/hk-victoria-harbour_thumb.jpg 600w, photos/hk-victoria-harbour.jpg 1500w"
+              sizes="(max-width: 640px) 100vw, 50vw"
+              width="600" height="800" loading="lazy" alt="Victoria Harbour and Kowloon seen from high above Central"></a>
+          <figcaption><em>Across the harbour to Kowloon</em> <span class="place">Hong Kong</span></figcaption>
+        </figure>
+        <figure style="--ar: 0.75" data-place="Hong Kong">
+          <a href="photos/hk-central-dusk.jpg"><img
+              src="photos/hk-central-dusk_thumb.jpg"
+              srcset="photos/hk-central-dusk_thumb.jpg 600w, photos/hk-central-dusk.jpg 1500w"
+              sizes="(max-width: 640px) 100vw, 50vw"
+              width="600" height="800" loading="lazy" alt="Central district towers and a footbridge at blue hour, a red taxi below"></a>
+          <figcaption><em>Central at blue hour</em> <span class="place">Hong Kong</span></figcaption>
+        </figure>
+      </div>
+
+      <figure class="wide" data-place="Hong Kong">
+        <a href="photos/hk-star-ferry-sunset.jpg"><img
+            src="photos/hk-star-ferry-sunset_thumb.jpg"
+            srcset="photos/hk-star-ferry-sunset_thumb.jpg 800w, photos/hk-star-ferry-sunset.jpg 2000w"
+            sizes="(max-width: 1184px) 100vw, 1120px"
+            width="800" height="600" loading="lazy" alt="Star Ferry crossing Victoria Harbour at sunset"></a>
+        <figcaption><em>Star Ferry at sunset</em> <span class="place">Hong Kong</span></figcaption>
+      </figure>
+
+      <div class="pair">
+        <figure style="--ar: 0.75" data-place="Shanghai">
+          <a href="photos/shanghai-custom-house.jpg"><img
+              src="photos/shanghai-custom-house_thumb.jpg"
+              srcset="photos/shanghai-custom-house_thumb.jpg 600w, photos/shanghai-custom-house.jpg 1500w"
+              sizes="(max-width: 640px) 100vw, 36vw"
+              width="600" height="800" loading="lazy" alt="The Custom House clock tower on the Bund at night"></a>
+          <figcaption><em>Custom House on the Bund</em> <span class="place">Shanghai</span></figcaption>
+        </figure>
+        <figure style="--ar: 1.3333" data-place="Hefei">
+          <a href="photos/lamp-in-blossoms.jpg"><img
+              src="photos/lamp-in-blossoms_thumb.jpg"
+              srcset="photos/lamp-in-blossoms_thumb.jpg 800w, photos/lamp-in-blossoms.jpg 2000w"
+              sizes="(max-width: 640px) 100vw, 64vw"
+              width="800" height="600" loading="lazy" alt="A street lamp glowing among cherry blossoms at night"></a>
+          <figcaption><em>Street lamp in cherry blossoms</em> <span class="place">Hefei</span></figcaption>
+        </figure>
+      </div>
+
+      <figure class="solo solo-left" style="--ar: 0.75" data-place="Suzhou">
+        <a href="photos/lamp-and-notes.jpg"><img
+            src="photos/lamp-and-notes_thumb.jpg"
+            srcset="photos/lamp-and-notes_thumb.jpg 600w, photos/lamp-and-notes.jpg 1500w"
+            sizes="(max-width: 640px) 100vw, 58vw"
+            width="600" height="800" loading="lazy" alt="A calligraphy lampshade glowing in front of a wall of handwritten notes"></a>
+        <figcaption><em>Lamp and handwritten notes</em> <span class="place">Suzhou</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= SINGAPORE ================= -->
+  <section class="chapter" data-country="Singapore" aria-labelledby="singapore">
+    <div class="ph-inner">
+      <div class="chapter-head">
+        <h2 id="singapore">Singapore</h2>
+        <p class="cities"></p>
+      </div>
+
+      <figure class="wide">
+        <a href="photos/sg-marina-bay-sands.jpg"><img
+            src="photos/sg-marina-bay-sands_thumb.jpg"
+            srcset="photos/sg-marina-bay-sands_thumb.jpg 800w, photos/sg-marina-bay-sands.jpg 2000w"
+            sizes="(max-width: 1184px) 100vw, 1120px"
+            width="800" height="600" loading="lazy" alt="Marina Bay Sands towers across the water at dusk, the glass dome of the Apple store below"></a>
+        <figcaption><em>Marina Bay Sands at dusk</em></figcaption>
+      </figure>
+
+      <div class="pair">
+        <figure style="--ar: 0.75">
+          <a href="photos/sg-apple-marina-bay.jpg"><img
+              src="photos/sg-apple-marina-bay_thumb.jpg"
+              srcset="photos/sg-apple-marina-bay_thumb.jpg 600w, photos/sg-apple-marina-bay.jpg 1500w"
+              sizes="(max-width: 640px) 100vw, 50vw"
+              width="600" height="800" loading="lazy" alt="The glass dome of Apple Marina Bay Sands on the water, people crossing the walkway"></a>
+          <figcaption><em>Apple Marina Bay Sands</em></figcaption>
+        </figure>
+        <figure style="--ar: 0.75">
+          <a href="photos/sg-merlion.jpg"><img
+              src="photos/sg-merlion_thumb.jpg"
+              srcset="photos/sg-merlion_thumb.jpg 600w, photos/sg-merlion.jpg 1500w"
+              sizes="(max-width: 640px) 100vw, 50vw"
+              width="600" height="800" loading="lazy" alt="The Merlion statue lit at blue hour, water arcing from its mouth toward the skyline"></a>
+          <figcaption><em>The Merlion at blue hour</em></figcaption>
+        </figure>
+      </div>
+
+      <figure class="solo solo-right" style="--ar: 0.75">
+        <a href="photos/sg-tree-field.jpg"><img
+            src="photos/sg-tree-field_thumb.jpg"
+            srcset="photos/sg-tree-field_thumb.jpg 600w, photos/sg-tree-field.jpg 1500w"
+            sizes="(max-width: 640px) 100vw, 58vw"
+            width="600" height="800" loading="lazy" alt="A large tree standing alone on a sunny grass field beside a condominium"></a>
+        <figcaption><em>A tree on an open field</em></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= MALAYSIA ================= -->
+  <section class="chapter" data-country="Malaysia" aria-labelledby="malaysia">
+    <div class="ph-inner">
+      <div class="chapter-head">
+        <h2 id="malaysia">Malaysia</h2>
+        <p class="cities"></p>
+      </div>
+
+      <div class="pair">
+        <figure style="--ar: 0.75" data-place="Kuala Lumpur">
+          <a href="photos/kl-sultan-abdul-samad.jpg"><img
+              src="photos/kl-sultan-abdul-samad_thumb.jpg"
+              srcset="photos/kl-sultan-abdul-samad_thumb.jpg 600w, photos/kl-sultan-abdul-samad.jpg 1500w"
+              sizes="(max-width: 640px) 100vw, 50vw"
+              width="600" height="800" loading="lazy" alt="Sultan Abdul Samad Building and its clock tower under a cloudy sky"></a>
+          <figcaption><em>Sultan Abdul Samad Building</em> <span class="place">Kuala Lumpur</span></figcaption>
+        </figure>
+        <figure style="--ar: 0.75" data-place="Kuala Lumpur">
+          <a href="photos/kl-petronas-night.jpg"><img
+              src="photos/kl-petronas-night_thumb.jpg"
+              srcset="photos/kl-petronas-night_thumb.jpg 600w, photos/kl-petronas-night.jpg 1500w"
+              sizes="(max-width: 640px) 100vw, 50vw"
+              width="600" height="800" loading="lazy" alt="Petronas Twin Towers lit up at night"></a>
+          <figcaption><em>Petronas Towers at night</em> <span class="place">Kuala Lumpur</span></figcaption>
+        </figure>
+      </div>
+
+      <figure class="solo solo-left" style="--ar: 0.75" data-place="Malacca">
+        <a href="photos/malacca-straits-mosque.jpg"><img
+            src="photos/malacca-straits-mosque_thumb.jpg"
+            srcset="photos/malacca-straits-mosque_thumb.jpg 600w, photos/malacca-straits-mosque.jpg 1500w"
+            sizes="(max-width: 640px) 100vw, 58vw"
+            width="600" height="800" loading="lazy" alt="The white Malacca Straits Mosque on stilts over the sea, rocks in the foreground"></a>
+        <figcaption><em>Malacca Straits Mosque</em> <span class="place">Malacca</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= SOUTH KOREA ================= -->
+  <section class="chapter" data-country="South Korea" aria-labelledby="south-korea">
+    <div class="ph-inner">
+      <div class="chapter-head">
+        <h2 id="south-korea">South Korea</h2>
+        <p class="cities"></p>
+      </div>
+
+      <div class="pair">
+        <figure style="--ar: 1.7778" data-place="Incheon">
+          <a href="photos/incheon-chinatown.jpg"><img
+              src="photos/incheon-chinatown_thumb.jpg"
+              srcset="photos/incheon-chinatown_thumb.jpg 800w, photos/incheon-chinatown.jpg 2000w"
+              sizes="(max-width: 640px) 100vw, 76vw"
+              width="800" height="450" loading="lazy" alt="Street with Chinese restaurant signs in Incheon Chinatown"></a>
+          <figcaption><em>Chinatown</em> <span class="place">Incheon</span></figcaption>
+        </figure>
+        <figure style="--ar: 0.5625" data-place="Incheon">
+          <a href="photos/incheon-sunset.jpg"><img
+              src="photos/incheon-sunset_thumb.jpg"
+              srcset="photos/incheon-sunset_thumb.jpg 450w, photos/incheon-sunset.jpg 1125w"
+              sizes="(max-width: 640px) 100vw, 24vw"
+              width="450" height="800" loading="lazy" alt="Three people in silhouette at a railing by the water as the sun sets"></a>
+          <figcaption><em>Waterfront at sunset</em> <span class="place">Incheon</span></figcaption>
+        </figure>
+      </div>
+
+      <figure class="solo solo-right" style="--ar: 0.75" data-place="Incheon">
+        <a href="photos/gull-at-sunset.jpg"><img
+            src="photos/gull-at-sunset_thumb.jpg"
+            srcset="photos/gull-at-sunset_thumb.jpg 600w, photos/gull-at-sunset.jpg 1500w"
+            sizes="(max-width: 640px) 100vw, 58vw"
+            width="600" height="800" loading="lazy" alt="A gull standing on a post beside a wire, with the sun setting behind"></a>
+        <figcaption><em>Gull at sunset</em> <span class="place">Incheon</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ph-foot">
+  <div class="ph-inner">
+    <p><span>All photos &copy; Jiaxuan Lin. Please ask before reusing.</span> <a href="index.html">Back to homepage</a></p>
+  </div>
+</footer>
+
+<!-- Full-screen viewer -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+  <button class="lb-btn lb-close" type="button" aria-label="Close">&#x2715;</button>
+  <button class="lb-btn lb-prev" type="button" aria-label="Previous photo">&lsaquo;</button>
+  <figure class="lb-figure">
+    <img id="lb-img" alt="">
+    <figcaption id="lb-cap"></figcaption>
+  </figure>
+  <button class="lb-btn lb-next" type="button" aria-label="Next photo">&rsaquo;</button>
+</div>
+
+<script>
+  // Fill the small city list next to each chapter title from the photos inside it.
+  Array.prototype.forEach.call(document.querySelectorAll(".chapter"), function (ch) {
+    var seen = [];
+    Array.prototype.forEach.call(ch.querySelectorAll("figure[data-place]"), function (f) {
+      var c = f.getAttribute("data-place");
+      if (seen.indexOf(c) < 0) seen.push(c);
+    });
+    var el = ch.querySelector(".cities");
+    if (el) { if (seen.length) el.textContent = seen.join(", "); else el.remove(); }
+  });
+
+  (function () {
+    var links = Array.prototype.slice.call(document.querySelectorAll(".chapter figure > a"));
+    var box = document.getElementById("lightbox");
+    var img = document.getElementById("lb-img");
+    var cap = document.getElementById("lb-cap");
+    var closeBtn = box.querySelector(".lb-close");
+    var idx = 0, opener = null;
+
+    function show(i) {
+      idx = (i + links.length) % links.length;
+      var a = links[idx];
+      var fig = a.parentNode;
+      var place = fig.getAttribute("data-place") || fig.closest(".chapter").getAttribute("data-country");
+      var em = fig.querySelector("figcaption em");
+      var title = em ? em.textContent : fig.querySelector("figcaption").textContent;
+      img.src = a.getAttribute("href");
+      img.alt = a.querySelector("img").alt;
+      cap.textContent = place && place !== title ? title + ", " + place : title;
+    }
+    function open(i) {
+      opener = links[i];
+      show(i);
+      box.hidden = false;
+      document.body.style.overflow = "hidden";
+      closeBtn.focus();
+    }
+    function close() {
+      box.hidden = true;
+      img.removeAttribute("src");
+      document.body.style.overflow = "";
+      if (opener) opener.focus();
+    }
+
+    links.forEach(function (a, i) {
+      a.addEventListener("click", function (e) { e.preventDefault(); open(i); });
+    });
+    closeBtn.addEventListener("click", close);
+    box.querySelector(".lb-prev").addEventListener("click", function () { show(idx - 1); });
+    box.querySelector(".lb-next").addEventListener("click", function () { show(idx + 1); });
+    box.addEventListener("click", function (e) { if (e.target === box) close(); });
+    document.addEventListener("keydown", function (e) {
+      if (box.hidden) return;
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowLeft") show(idx - 1);
+      if (e.key === "ArrowRight") show(idx + 1);
+    });
+  })();
+</script>
+</body>
+</html>

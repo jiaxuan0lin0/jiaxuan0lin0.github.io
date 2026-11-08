@@ -1,0 +1,163 @@
+/* Jiaxuan Lin — academic homepage */
+
+:root {
+  --bg: #ffffff;
+  --text: #1f2328;
+  --muted: #5b6470;
+  --accent: #1f3a5f;
+  --link: #1a5fb4;
+  --rule: #e3e6ea;
+  --thumb-bg: #f1f3f5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14171b;
+    --text: #e6e8eb;
+    --muted: #9aa3ad;
+    --accent: #9cc0ea;
+    --link: #8ab4f8;
+    --rule: #2a2f36;
+    --thumb-bg: #1e2329;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 48px 24px 40px;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---------- header ---------- */
+.intro { margin-bottom: 12px; }
+
+h1 {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0 0 4px;
+  letter-spacing: -0.01em;
+}
+
+.intro p { margin: 0 0 12px; }
+
+.links { margin: 0 0 18px !important; font-size: 15px; }
+.dot { color: var(--muted); margin: 0 4px; }
+
+/* ---------- sections ---------- */
+section { margin-top: 36px; }
+
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 0 0 14px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* ---------- news ---------- */
+.news {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.news li {
+  display: flex;
+  gap: 16px;
+  padding: 3px 0;
+}
+.news .date {
+  flex: 0 0 78px;
+  white-space: nowrap;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- publications / projects ---------- */
+.item {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 14px 0;
+}
+.thumb { flex: 0 0 220px; }
+.thumb img,
+.thumb video {
+  width: 220px;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 6px;
+  background: var(--thumb-bg);
+  display: block;
+}
+.item-text { flex: 1 1 auto; min-width: 0; }
+.item-text p { margin: 2px 0; }
+
+.title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--text);
+}
+a.title { color: var(--link); }
+
+.authors { color: var(--text); }
+.venue { color: var(--muted); font-style: italic; }
+.meta .dot { font-style: normal; }
+.tldr { color: var(--muted); margin-top: 6px !important; }
+
+/* ---------- education & experience ---------- */
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.timeline li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 6px 0;
+}
+.timeline .when {
+  color: var(--muted);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.muted { color: var(--muted); }
+
+sub { line-height: 0; }
+
+/* ---------- footer ---------- */
+footer {
+  margin-top: 48px;
+  padding-top: 12px;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* ---------- mobile ---------- */
+@media (max-width: 640px) {
+  .page { padding: 28px 16px 32px; }
+  h1 { font-size: 28px; }
+  .item { flex-direction: column; gap: 10px; }
+  .thumb, .thumb img, .thumb video { width: 100%; flex-basis: auto; }
+  .timeline li { flex-direction: column; gap: 0; }
+  .news li { gap: 10px; }
+}
